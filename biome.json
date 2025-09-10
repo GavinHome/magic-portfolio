@@ -6,7 +6,8 @@
     "useIgnoreFile": false
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "ignore": ["node_modules", ".next"]
   },
   "formatter": {
     "enabled": true,
@@ -16,7 +17,32 @@
   },
   "linter": {
     "enabled": true,
-    "rules": { "recommended": true }
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noUselessElse": "off",
+        "useImportType": "off",
+        "useNumberNamespace": "warn",
+        "useConst": "warn",
+        "useSelfClosingElements" : "off",
+        "useTemplate": "warn",
+        "useNodejsImportProtocol": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn",
+        "useJsxKeyInIterable": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn"
+      },
+      "complexity": {
+        "noUselessFragments": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn",
+        "noExplicitAny": "warn"
+      }
+    }
   },
   "javascript": {
     "formatter": {
